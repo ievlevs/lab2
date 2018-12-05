@@ -10,6 +10,7 @@ using namespace pscx_memory;
 // CPU state
 struct Cpu
 {
+	
 	// 0xbfc00000 PC reset value at the beginning of the BIOS
 	Cpu(Interconnect inter) :
 		m_pc(0xbfc00000),
@@ -26,7 +27,7 @@ struct Cpu
 		m_regs[0] = 0x0;
 		m_outRegs[0] = 0x0;
 	}
-
+	int i=1;
 	enum InstructionType
 	{
 		INSTRUCTION_TYPE_LUI,

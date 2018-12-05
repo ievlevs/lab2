@@ -31,10 +31,10 @@ uint32_t Ram::load32(uint32_t offset) const
 //--------------------------------------------------------------
 void Ram::store32(uint32_t offset, uint32_t value)
 {
-	uint8_t b0 = value;
-	uint8_t b1 = value >> 8;
-	uint8_t b2 = value >> 16;
-	uint8_t b3 = value >> 24;
+	uint8_t b0 = (uint8_t) value;
+	uint8_t b1 = (uint8_t)( value >> 8 );
+	uint8_t b2 = (uint8_t)( value >> 16 );
+	uint8_t b3 = (uint8_t)( value >> 24 );
 
 	this->m_data[offset + 0] = b0;
 	this->m_data[offset + 1] = b1;
